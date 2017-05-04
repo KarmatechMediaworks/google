@@ -1,0 +1,22 @@
+TUTORIALDIR=~/src/ignitionslabs/php_mvms_quickstart-2017-05-04-14-41
+
+
+git clone https://github.com/KarmatechMediaworks/google.git $TUTORIALDIR
+
+cd $TUTORIALDIR/1-hello-world
+
+
+curl -sS https://getcomposer.org/installer | php
+
+
+php composer.phar install
+
+php -S 0.0.0.0:8080 -t web/
+
+
+CTRL+C
+
+gcloud app deploy --project ignitionslabs
+
+
+
