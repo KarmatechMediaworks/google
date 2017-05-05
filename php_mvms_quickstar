@@ -19,4 +19,7 @@ CTRL+C
 gcloud app deploy --project ignitionslabs
 
 
+gcloud app browse
+
+
 
