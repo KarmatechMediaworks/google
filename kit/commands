@@ -1,0 +1,38 @@
+
+//Step1: Create Repositary in google cloud
+
+TUTORIALDIR=~/src/ignitionslabs/php_mvms_quickstart-2017-05-04-14-41
+
+
+//Clone your code file from github to google cloud Repositary
+
+git clone https://github.com/KarmatechMediaworks/google.git $TUTORIALDIR
+
+
+//Navigate to directory if any there in github.
+
+cd $TUTORIALDIR/1-hello-world
+
+
+//Install the php composer if you need.
+
+curl -sS https://getcomposer.org/installer | php
+
+php composer.phar install
+
+php -S 0.0.0.0:8080 -t web/
+
+
+CTRL+C
+
+
+//Deploy the app 
+
+gcloud app deploy --project ignitionslabs
+
+//Create link to browse.
+
+gcloud app browse
+
+
+
